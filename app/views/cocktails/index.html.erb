@@ -1,10 +1,25 @@
-<h1>Cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-  <%= link_to  cocktail_path(cocktail) do %>
-    <div class="row">
-      <div class="card-category col-md-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          <%= cocktail.name %>
+<!-- <h1>Cocktails</h1> -->
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.4)), url(https://assets.bonappetit.com/photos/57acbeaa1b33404414975151/16:9/w_2560,c_limit/pineapple-hibiscus-cocktail.jpg);">
+  <div class="container">
+    <h1>Welcome to Cocktail!</h1>
+     <p><span id="banner-typed-text"></span></p>
+      <%= link_to 'Create Cocktail!', new_cocktail_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-md-4">
+        <%= link_to  cocktail_path(cocktail), class: "card-link" do %>
+          <div class="card-category text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.foodism.co.uk/featured_image/583c2848604f7.jpeg)">
+            <%= cocktail.name %>
+
+           </div>
+        <% end %>
       </div>
-    </div>
-  <% end %>
-<% end %>
+    <% end %>
+  </div>
+</div>
+
