@@ -3,7 +3,9 @@
   <% @cocktail.doses.each do |dose| %>
     <%= dose.ingredient.name %> <br>
     <%= dose.description %> <br>
-    <%= link_to 'Delete dose', dose_path(dose), method: "delete" class: "btn btn-danger"%> <br>
+    <%= link_to 'Delete dose', dose_path(dose), method: "delete", class: "btn btn-danger"%>
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+    <br>
   <% end %>
   <br>
   <%= link_to 'Back Home', cocktails_path, class: "btn btn-danger" %>
