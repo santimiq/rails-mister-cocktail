@@ -1,0 +1,32 @@
+.contact1 {
+  width: 100%;
+    min-height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contact1 {
+    width: 1163px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+
+body {
+  background: black;
+}
+
+.gh {
+  margin-top: 10px;
+}
+
+.btn {
+    border-radius: 16px;
+}
