@@ -1,21 +1,20 @@
-<div class="container bg">
-
+<div class="background">
+  <div class="container bg">
   <div class="contact1">
-    <div class="container-contact1">
-      <div class="contact1-pic">
-        <%= cl_image_tag("d0prd24cuitiawj3cteu",
-        width: 400, height: 400, crop: :fill) %>
+      <div class="container-contact1">
+        <div class="contact1-pic">
+          <%= cl_image_tag("d0prd24cuitiawj3cteu",
+          width: 400, height: 400, crop: :fill) %>
+        </div>
+        <%= simple_form_for @cocktail do |f| %>
+        <h1>Create your Cocktail</h1>
+        <%= f.input :name, placeholder:'Name your cocktail 🍸', label: false %>
+        <%= f.input :photo, label: 'Upload your photo'%>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.submit "Create your cocktail!", class: "btn btn-primary" %> <br>
+         <%= link_to 'Go 🏠', root_path, class: "btn btn-warning gh" %>
+        <% end %>
       </div>
-      <%= simple_form_for @cocktail do |f| %>
-      <h1>Create your Cocktail</h1>
-      <%= f.input :name, placeholder:'Name your cocktail 🍸', label: false %>
-      <%= f.input :photo, label: 'Upload your photo'%>
-      <%= f.input :photo_cache, as: :hidden %>
-      <%= f.submit "Create your cocktail!", class: "btn btn-primary" %> <br>
-       <%= link_to 'Go 🏠', root_path, class: "btn btn-warning gh" %>
-      <% end %>
     </div>
- </div>
-
-
+  </div>
 </div>
